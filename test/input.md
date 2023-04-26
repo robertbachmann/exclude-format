@@ -3,6 +3,20 @@ title: Lorem ipsum
 author: Nullus
 ---
 
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec
-hendrerit tempor tellus. Donec pretium posuere tellus. Proin quam
-nisl, tincidunt et, mattis eget, convallis nec, purus.
+::: {.some-class #someId some-attr1=a some-att2=b}
+Lorem ipsum.
+:::
+
+::: {exclude-format='latex beamer' #someId2}
+This text was produced with Pandoc.
+:::
+
+::: {exclude-format='latex,beamer' #someId3}
+This text was produced with Pandoc.
+:::
+
+```{=latex}
+This text was produced with Pandoc and \LaTeX{}.
+```
+
+Lorem ipsum.

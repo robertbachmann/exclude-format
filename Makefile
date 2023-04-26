@@ -6,13 +6,13 @@ FILTER_NAME = $(patsubst %.lua,%,$(FILTER_FILE))
 # Allow to use a different pandoc binary, e.g. when testing.
 PANDOC ?= pandoc
 # Allow to adjust the diff command if necessary
-DIFF = diff
+DIFF = diff -u
 # Use a POSIX sed with ERE ('v' is specific to GNU sed)
 SED := sed $(shell sed v </dev/null >/dev/null 2>&1 && echo " --posix") -E
 
 # Pandoc formats for test outputs
 ifeq "$(FORMAT)" ""
-FORMAT = native
+FORMAT = html latex
 endif
 
 # Directory containing the Quarto extension

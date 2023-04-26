@@ -1,4 +1,4 @@
 input-files: ["test/input.md"]
-standalone: true
+standalone: false
 filters:
-  - {type: lua, path: greetings.lua}
+  - {type: lua, path: exclude-format.lua}

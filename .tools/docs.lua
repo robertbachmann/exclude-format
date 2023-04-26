@@ -91,9 +91,9 @@ function Pandoc (doc)
   }
 
   -- Add the sample file as an example.
-  blocks:extend{pandoc.Header(2, 'Example', pandoc.Attr('Example'))}
-  blocks:extend(sample_blocks(stringify(meta['sample-file'])))
-  blocks:extend(result_blocks(stringify(meta['result-file'])))
+  --blocks:extend{pandoc.Header(2, 'Example', pandoc.Attr('Example'))}
+  --blocks:extend(sample_blocks(stringify(meta['sample-file'])))
+  --blocks:extend(result_blocks(stringify(meta['result-file'])))
 
   -- Add the filter code.
   local code_file = stringify(meta['code-file'])
